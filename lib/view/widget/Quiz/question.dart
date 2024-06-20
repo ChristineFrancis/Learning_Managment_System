@@ -8,14 +8,16 @@ class CustomQuestion extends StatelessWidget {
   final String answer1;
   final String answer2;
   final String answer3;
+  final String answer4;
   final int questionIndex;
 
   CustomQuestion({
     super.key,
+    required this.question,
     required this.answer1,
     required this.answer2,
     required this.answer3,
-    required this.question,
+    required this.answer4,
     required this.questionIndex,
   });
 
@@ -29,13 +31,21 @@ class CustomQuestion extends StatelessWidget {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            Text(question , style: TextStyle(fontSize: 20 ),),
+            Row(
+              children: [
+                Text((questionIndex+1).toString() , style: const TextStyle(fontSize: 20 , color: AppColor.primaryColor),),
+                const Text('-', style: TextStyle(fontSize: 20 , color: AppColor.primaryColor),),
+                const SizedBox(width: 6,),
+                Text(question , style: const TextStyle(fontSize: 20 ),),
+              ],
+            ),
         
             CustomAnswer(answer: answer1,groupValue: groupValue , questionIndex: questionIndex,),
             CustomAnswer(answer: answer2,groupValue: groupValue , questionIndex: questionIndex,),
             CustomAnswer(answer: answer3,groupValue: groupValue , questionIndex: questionIndex,),
-            Divider(color: AppColor.violetColor,thickness: 4,),
-            SizedBox(height: 20),
+            CustomAnswer(answer: answer4,groupValue: groupValue , questionIndex: questionIndex,),
+            const Divider(color: AppColor.violetColor,thickness: 4,),
+            const SizedBox(height: 20),
           ],
         ),
       );

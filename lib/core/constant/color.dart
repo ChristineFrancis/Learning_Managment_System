@@ -8,6 +8,6 @@ class AppColor{
  static const Color secondaryColor=Color(0xff4B2C7E);
  static const Color whiteColor=Colors.white;
  static const Color violetColor=Color(0xffD6BFFC);
- 
+  static Color? lightGreyColor=Colors.grey[300];
 
 }

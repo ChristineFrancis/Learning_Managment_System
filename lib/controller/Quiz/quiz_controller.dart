@@ -10,10 +10,7 @@ class QuizControllerImp extends QuizController {
 
   @override
   void onInit() {
-    // Initialize the list with the number of questions.
-    // Assuming you know the number of questions at the start.
-    // Adjust the length based on your requirement or initialization logic.
-    selectedAnswers.addAll(List<String?>.filled(10, null)); // For 10 questions example.
+    selectedAnswers.addAll(List<String?>.filled(10, null)); 
     super.onInit();
   }
 

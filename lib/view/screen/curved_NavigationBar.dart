@@ -1,8 +1,12 @@
 import 'package:curved_navigation_bar/curved_navigation_bar.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:uni_pro/controller/Quiz/course_details.dart';
+import 'package:uni_pro/controller/Quiz/quiznum.dart';
 import 'package:uni_pro/controller/bottom_navigation_controller.dart';
 import 'package:uni_pro/core/constant/color.dart';
+import 'package:uni_pro/view/screen/chatAi/ebefore_chat.dart';
+import 'package:uni_pro/view/screen/quiz/before_quiz.dart';
 
 // ignore: must_be_immutable, camel_case_types
 class Curved_NB extends StatelessWidget {
@@ -13,9 +17,10 @@ class Curved_NB extends StatelessWidget {
   final screens = [
     
     Icon(Icons.home),
+    CourseDetails(),
+   // Quiznum(),
     Icon(Icons.home),
-    Icon(Icons.home),
-    Icon(Icons.home),
+    BeforeChatAi(),
     Icon(Icons.home),
     
   ];

@@ -9,4 +9,5 @@ class AppUrl {
   static String resendCodeRegister = "$baseUrl/auth/resend-code";
   static String forgetPasswordUrl = "$baseUrl/auth/forget-password";
   static String resetPassword = "$baseUrl/auth/reset-password";
+  static String quiz = "$baseUrl/courses/1";
 }

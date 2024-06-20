@@ -87,6 +87,13 @@ abstract class SignUpController extends GetxController with GetTickerProviderSta
              String accessToken=response['access_token'];
               print('access_tokeeeeeeen sign up $accessToken');
                myServices.sharedPreferences.setString('access_token' , accessToken );
+               myServices.sharedPreferences.setString('user name' , firstName.text );
+              myServices.sharedPreferences.setString('full name' , firstName.text + ''+lastName.text );
+              String? fullname=myServices.sharedPreferences.getString('full name');
+              String? name=myServices.sharedPreferences.getString('user name');
+              print(fullname);
+              print(name);
+               
               Get.defaultDialog(title: 'Welcome', content: Text(response['message'] ,) , titleStyle: const TextStyle(color: AppColor.primaryColor, fontSize: 25 ) );
             Future.delayed(const Duration(seconds:2), () {
             if (Get.isDialogOpen ?? false) {

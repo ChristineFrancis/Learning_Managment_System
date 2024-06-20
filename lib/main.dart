@@ -6,6 +6,7 @@ import 'package:uni_pro/core/class/postRequest.dart';
 import 'package:uni_pro/core/constant/routes.dart';
 import 'package:uni_pro/routes.dart';
 import 'package:uni_pro/services/services.dart';
+import 'package:uni_pro/view/screen/quiz/quiz.dart';
 
 void main() async{
    Get.put(ApiPostRequest());
@@ -25,6 +26,7 @@ class MyApp extends StatelessWidget {
         fontFamily: 'Exo2', 
         useMaterial3: true,
       ),
+     // home: QuizPage(),
       initialRoute:AppRoute.splash ,
       getPages: routes,
     );
